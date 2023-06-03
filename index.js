@@ -13,3 +13,114 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
+//MANAGER
+
+const managerQ = () => {
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is your name?"
+        },
+
+        {
+            type: "input",
+            name: "employeeID",
+            message: "Please, type your Employee's ID."
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "Please, type in your email address."
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "Please, type in your office number."
+        }
+
+ ])
+}
+
+// CHOOSE EMPLOYEE
+const employeeChoice = () =>{
+return inquirer.prompt([
+{
+    type: "list",
+    name: "employeeRole",
+    message:  "Please, choose your next employee.",
+    choices: [
+        "Engineer",
+        "Intern",
+        "Finish building the team"
+    ]
+}
+// then ? maybe 
+
+
+
+
+])
+}
+
+//ENGINEER QUESTIONS
+const engineerQ = () =>{
+    return inquirer.prompt([
+{
+    type: "input",
+    name: "name",
+    message: "Please, type the Engineer's name?"
+},
+{
+    type: "input",
+    name: "engineerID",
+    message: "Please, type your Engineer's ID."
+},
+{
+    type: "input",
+    name: "email",
+    message: "Please, type in your email address."
+
+},
+{
+    type: "input",
+    name: "githubUser",
+    message: "Please, type in your GitHub user name."
+}
+
+
+]);
+};
+
+//INTERN QUESTION
+const internQ = () =>{
+    return inquirer.prompt([
+{
+    type: "input",
+    name: "name",
+    message: "Please, type the Intern's name."
+},
+{
+    type: "input",
+    name: "internID",
+    message: "Please, type your Intern's ID."
+},
+{
+    type: "input",
+    name: "email",
+    message: "Please, type in your email address."
+
+},
+{
+    type: "input",
+    name: "school",
+    message: "Please, type in your school."
+}
+
+
+]);
+};
+
+
+//INIT FUNCTION
+
