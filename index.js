@@ -10,6 +10,9 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
+//Array for team members
+const teammates = [];
+
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
@@ -39,7 +42,11 @@ const managerQ = () => {
             message: "Please, type in your office number."
         }
 
- ])
+ ]).then(value =>{
+    const manager = new Manager(value.name, value.employeeID, value.email, value.officeNumber);
+    teammates.push(manager);
+    employeeChoice();
+ })
 }
 
 // CHOOSE EMPLOYEE
@@ -89,7 +96,11 @@ const engineerQ = () =>{
 }
 
 
-]);
+]).then(value =>{
+    const engineer = new Engineer(value.name, value.engineerID, value.email, value.githubUser);
+    teammates.push(engineer);
+    employeeChoice();
+ });
 };
 
 //INTERN QUESTION
@@ -118,7 +129,11 @@ const internQ = () =>{
 }
 
 
-]);
+]).then(value =>{
+    const intern = new Intern(value.name, value.internID, value.email, value.school);
+    teammates.push(intern);
+    employeeChoice();
+ });
 };
 
 
