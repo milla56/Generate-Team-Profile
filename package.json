@@ -1,0 +1,25 @@
+{
+  "name": "generate-team-profile",
+  "version": "1.0.0",
+  "description": "team profile generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milla56/Generate-Team-Profile.git"
+  },
+  "author": "Lubomila Lozanova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milla56/Generate-Team-Profile/issues"
+  },
+  "homepage": "https://github.com/milla56/Generate-Team-Profile#readme",
+  "dependencies": {
+    "inquirer": "^6.5.2"
+  }
+}
