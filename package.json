@@ -21,5 +21,8 @@
   "homepage": "https://github.com/milla56/Generate-Team-Profile#readme",
   "dependencies": {
     "inquirer": "^6.5.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
