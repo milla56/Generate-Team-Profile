@@ -10,24 +10,27 @@
   - [Credits](#credits)
   - [License](#license)
 
-
+--- 
 
 ## Description
 "Generate Team Profile" is an application that generates HTML files using input from a command-line interface. The app is taking in information about employees on a software engineering team and generate an HTML webpage that displays summaries for each person. The project aims to provide quick and easy access to employees personal details, so a manager can easily contact the team.
 
+--- 
 
 ## Installation
 
 - Clone the GitHub repository to your computer.
 - Navigate to your terminal and use the following command "node index.js".
+- Link to deployed URL: 
  
-
+---
 
 ## User Story 
 - AS A manager
 - I WANT to generate a webpage that displays my team's basic info
 - SO THAT I have quick access to their emails and GitHub profiles
 
+---
 
 
 ## Usage
@@ -44,10 +47,15 @@ The list shows what steps were made to complete the challenge:
  - When the question are answered, the user will have the option to choose the next employee (engineer or intern) or to finish the application by selecting the option - "Finish building the team".
  - When the user chooses to finish building the team, they exit the application and the HTML is generated. The HTML file is located in the ```output``` folder, called ```team.html```.
 
+---
 
 
 ## Demo
-![Demo]()
+![Demo](./screenshots/demo.gif);
+
+---
+
+
 
 
 ## Technologies Used
@@ -57,10 +65,12 @@ The list shows what steps were made to complete the challenge:
 - Inquirer package - version 6.5.2
 - Jest Package -  version 29.5.0
 
+---
 
 ## Credits
 
 N/A
+---
 
 
 ## License
