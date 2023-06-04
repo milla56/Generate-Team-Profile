@@ -37,8 +37,8 @@ const managerQ = () => {
 
         {
             type: "input",
-            name: "employeeID",
-            message: "Please, type your Employee's ID.",
+            name: "managerId",
+            message: "What is the team manager's id?",
             validate: managerID => {
                 if(managerID){
                     return true;
@@ -51,7 +51,7 @@ const managerQ = () => {
         {
             type: "input",
             name: "email",
-            message: "Please, type in your email address.",
+            message: "What is the team manager's email?",
             validate: email => {
                 if(email){
                     return true;
@@ -64,7 +64,7 @@ const managerQ = () => {
         {
             type: "input",
             name: "officeNumber",
-            message: "Please, type in your office number.",
+            message: "What is the team manager's office number?",
             validate: officeNum => {
                 if(officeNum){
                     return true;
@@ -76,7 +76,7 @@ const managerQ = () => {
         }
 
  ]).then(value =>{
-    const manager = new Manager(value.name, value.employeeID, value.email, value.officeNumber);
+    const manager = new Manager(value.name, value.managerId, value.email, value.officeNumber);
     teammates.push(manager);
     employeeChoice();
  })
@@ -88,7 +88,7 @@ return inquirer.prompt([
 {
     type: "list",
     name: "employeeRole",
-    message:  "Please, choose your next employee.",
+    message:  "Which type of team member would you like to add?",
     choices: [
         "Engineer",
         "Intern",
@@ -98,15 +98,16 @@ return inquirer.prompt([
 ]).then(userInput => {
     switch (userInput.employeeRole) {
         //switch statement
-        case "Add An Engineer":
+        case "Engineer":
             engineerQ();
             break;
-        case "add an intern":
+        case "Intern":
             internQ();
             break;
-
-        default:
+        case "Finish building the team":
+        // default
             buildHtml();
+            break;
     }
 });
 }
@@ -117,7 +118,7 @@ const engineerQ = () =>{
 {
     type: "input",
     name: "name",
-    message: "Please, type the Engineer's name?",
+    message: "What is your Engineer's name?",
     validate: engineerName => {
         if(engineerName){
         return true;
@@ -131,7 +132,7 @@ const engineerQ = () =>{
 {
     type: "input",
     name: "engineerID",
-    message: "Please, type your Engineer's ID.",
+    message: "What is your Engineer's ID?",
     validate: enginID => {
         if(enginID){
             return true;
@@ -143,7 +144,7 @@ const engineerQ = () =>{
 {
     type: "input",
     name: "email",
-    message: "Please, type in your email address.",
+    message: "What is your Engineer's email?",
     validate: email =>{
         if(email){
             return true;
@@ -157,7 +158,7 @@ const engineerQ = () =>{
 {
     type: "input",
     name: "githubUser",
-    message: "Please, type in your GitHub user name.",
+    message: "What is your Engineer's GitHub account?",
     validate: github =>{
         if(github){
             return true;
@@ -183,7 +184,7 @@ const internQ = () =>{
 {
     type: "input",
     name: "name",
-    message: "Please, type the Intern's name.",
+    message: "What is your Intern's name?",
     validate: name =>{
         if(name){
             return true;
@@ -196,7 +197,7 @@ const internQ = () =>{
 {
     type: "input",
     name: "internID",
-    message: "Please, type your Intern's ID.",
+    message: "What is your Intern's id?",
     validate: idIntern => {
         if(idIntern){
             return true;
@@ -209,7 +210,7 @@ const internQ = () =>{
 {
     type: "input",
     name: "email",
-    message: "Please, type in your email address.",
+    message: "What is your Intern's email address?",
     validate: email =>{
         if(email){
             return true;
@@ -223,7 +224,7 @@ const internQ = () =>{
 {
     type: "input",
     name: "school",
-    message: "Please, type in your school.",
+    message: "What is your Intern's school?",
     validate: internSchool => {
         if(internSchool){
             return true;
