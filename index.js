@@ -8,6 +8,7 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
+// Generate website
 const render = require("./src/page-template.js");
 
 //Array for team members
@@ -62,12 +63,20 @@ return inquirer.prompt([
         "Finish building the team"
     ]
 }
-// then ? maybe 
+]).then(userInput => {
+    switch (userInput.employeeRole) {
+        //switch statement
+        case "Add An Engineer":
+            engineerQ();
+            break;
+        case "add an intern":
+            internQ();
+            break;
 
-
-
-
-])
+        default:
+            buildHtml();
+    }
+});
 }
 
 //ENGINEER QUESTIONS
@@ -127,8 +136,6 @@ const internQ = () =>{
     name: "school",
     message: "Please, type in your school."
 }
-
-
 ]).then(value =>{
     const intern = new Intern(value.name, value.internID, value.email, value.school);
     teammates.push(intern);
@@ -137,5 +144,14 @@ const internQ = () =>{
 };
 
 
-//INIT FUNCTION
+// function for building the html file
+const buildHtml = () => {
+    console.log("Your Team is Created!")
 
+    fs.writeFileSync(outputPath, render(teammates), "UTF-8")
+
+}
+
+
+//INIT FUNCTION
+managerQ();
