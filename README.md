@@ -21,6 +21,8 @@
 
 - Clone the GitHub repository to your computer.
 - Navigate to your terminal and use the following command "node index.js".
+- Answer all of the questions.
+- The html file is located in output folder.
 - Link to deployed URL: 
  
 ---
@@ -37,7 +39,7 @@
 The list shows what steps were made to complete the challenge:
  - The application is created in command-line and accepts user input.
  - When the user enters ```npm test``` in the terminal , the user will see that all the four tests are passing.
- ![PASS]()
+ ![PASS](./screenshots/pass.png)
  - The first class ```Employee``` is the parent class and has the following properties - ```name, id``` and ```email``` and methods - ```getName(),getId(), getEmail()``` and ```getRole()```.
  - "Manager" class extends "Employee" class and have the following properties - ```officeNumber``` and ```getRole()```.
  - "Engineer" class extends the "Employee" class and have this properties - ```github, getGithub()``` and ```getRole()```.
