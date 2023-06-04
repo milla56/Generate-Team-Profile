@@ -10,6 +10,8 @@
   - [Credits](#credits)
   - [License](#license)
 
+
+
 ## Description
 "Generate Team Profile" is an application that generates HTML files using input from a command-line interface. The app is taking in information about employees on a software engineering team and generate an HTML webpage that displays summaries for each person. The project aims to provide quick and easy access to employees personal details, so a manager can easily contact the team.
 
@@ -30,6 +32,17 @@
 
 ## Usage
 The list shows what steps were made to complete the challenge:
+ - The application is created in command-line and accepts user input.
+ - When the user enters ```npm test``` in the terminal , the user will see that all the four tests are passing.
+ ![PASS]()
+ - The first class ```Employee``` is the parent class and has the following properties - ```name, id``` and ```email``` and methods - ```getName(),getId(), getEmail()``` and ```getRole()```.
+ - "Manager" class extends "Employee" class and have the following properties - ```officeNumber``` and ```getRole()```.
+ - "Engineer" class extends the "Employee" class and have this properties - ```github, getGithub()``` and ```getRole()```.
+ - The last class is "Intern", which also extends the "Employee" class, with this properties - ```school, getSchool()``` and ```getRole()```.
+ - Validation was added to insure the user input is in the proper format.
+ - When the user types in ```node index.js``` in the terminal and starts the application,the user is prompted to enter the team's manager details.
+ - When the question are answered, the user will have the option to choose the next employee (engineer or intern) or to finish the application by selecting the option - "Finish building the team".
+ - When the user chooses to finish building the team, they exit the application and the HTML is generated. The HTML file is located in the ```output``` folder, called ```team.html```.
 
 
 
