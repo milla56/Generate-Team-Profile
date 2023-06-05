@@ -23,7 +23,7 @@
 - Navigate to your terminal and use the following command "node index.js".
 - Answer all of the questions.
 - The html file is located in output folder.
-- Link to deployed URL: 
+
  
 ---
 
@@ -46,7 +46,8 @@ The list shows what steps were made to complete the challenge:
  - The last class is "Intern", which also extends the "Employee" class, with this properties - ```school, getSchool()``` and ```getRole()```.
  - Validation was added to insure the user input is in the proper format.
  - When the user types in ```node index.js``` in the terminal and starts the application,the user is prompted to enter the team's manager details.
- - When the question are answered, the user will have the option to choose the next employee (engineer or intern) or to finish the application by selecting the option - "Finish building the team".
+ - When the manager's questions are answered, the user will have the option to choose the next employee (engineer or intern) or to finish the application by selecting the option - "Finish building the team".
+ ![questions](./screenshots/q.png)
  - When the user chooses to finish building the team, they exit the application and the HTML is generated. The HTML file is located in the ```output``` folder, called ```team.html```.
 
 ---
